@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .home {
-  background-image: url('/assets/home.jpg');
+  background-image: url('<%= asset_path("home.jpg") %>');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;

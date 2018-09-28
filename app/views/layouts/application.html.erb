@@ -1,7 +1,7 @@
 <%= render 'layouts/head' %>
 
   <body>
-    <div class="container-fluid" id="main-img" style="background-image: url('/assets/<%= controller_name %>.jpg');">
+    <div class="container-fluid" id="main-img" style="background-image: url('<%= asset_path("#{controller_name}.jpg") %>');">
       <div id="nav" class="row v-align">
         <div class="col-6">
           <%= link_to "Vertical Tango", root_path, class: "logo" %>
