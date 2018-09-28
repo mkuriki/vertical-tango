@@ -21,7 +21,7 @@ default: &default
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
-production:
+development:
   <<: *default
   database: vertical-tango_development
 
@@ -75,7 +75,7 @@ test:
 #
 # You can use this database configuration with:
 #
-heroku:
+production:
   url: <%= ENV['DATABASE_URL'] %>
 
 # production:
