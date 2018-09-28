@@ -1,0 +1,7 @@
+booking_id,date,amount,payment_type_id,financial_institution,transaction_id,transaction_status
+1,2017-11-10,200,1,Citi Bank,2587,Authorized
+1,2017-12-10,100,2,PayPal,30989,Posted
+1,2017-12-30,100,1,Citi Bank,4567,Pending
+1,2018-01-05,100,2,PayPal,38990,Failed
+2,2018-02-15,100,3,Bank of America,287,Posted
+3,2018-03-01,500,1,TD Bank,45782,Authorized

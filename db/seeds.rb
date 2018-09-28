@@ -9,7 +9,7 @@
 require 'csv'
 
 if Rails.env.development?
-  file = File.expand_path('../../../CSV/venues.csv', __FILE__)
+  file = File.expand_path('CSV/venues.csv', __FILE__)
   CSV.foreach(Rails.root.join(file), headers: true) do |row|
     data = {
       name: row[0],
@@ -22,7 +22,7 @@ if Rails.env.development?
     Venue.where(name: row[0]).first_or_create(data).update(data)
   end
 
-  file = File.expand_path('../../../CSV/clients.csv', __FILE__)
+  file = File.expand_path('CSV/clients.csv', __FILE__)
   CSV.foreach(Rails.root.join(file), headers: true) do |row|
     data = {
       first_name: row[0],
@@ -39,19 +39,19 @@ if Rails.env.development?
     Client.where(email: row[8]).first_or_create(data).update(data)
   end
 
-  file = File.expand_path('../../../CSV/booking_types.csv', __FILE__)
+  file = File.expand_path('CSV/booking_types.csv', __FILE__)
   CSV.foreach(Rails.root.join(file), headers: true) do |row|
     data = { category: row[0] }
     BookingType.where(category: row[0]).first_or_create(data).update(data)
   end
 
-  file = File.expand_path('../../../CSV/booking_statuses.csv', __FILE__)
+  file = File.expand_path('CSV/booking_statuses.csv', __FILE__)
   CSV.foreach(Rails.root.join(file), headers: true) do |row|
     data = { status: row[0] }
     BookingStatus.where(status: row[0]).first_or_create(data).update(data)
   end
 
-  file = File.expand_path('../../../CSV/bookings.csv', __FILE__)
+  file = File.expand_path('CSV/bookings.csv', __FILE__)
   CSV.foreach(Rails.root.join(file), headers: true) do |row|
     data = {
       client_id: row[0],
@@ -67,13 +67,13 @@ if Rails.env.development?
     Booking.where(client_id: row[0], venue_id: row[1], date: row[2], time: row[3]).first_or_create!(data).update(data)
   end
 
-  file = File.expand_path('../../../CSV/payment_types.csv', __FILE__)
+  file = File.expand_path('CSV/payment_types.csv', __FILE__)
   CSV.foreach(Rails.root.join(file), headers: true) do |row|
     data = { category: row[0] }
     PaymentType.where(category: row[0]).first_or_create!(data).update(data)
   end
 
-  file = File.expand_path('../../../CSV/payments.csv', __FILE__)
+  file = File.expand_path('CSV/payments.csv', __FILE__)
   CSV.foreach(Rails.root.join(file), headers: true) do |row|
     data = {
       booking_id: row[0],
