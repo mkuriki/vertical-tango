@@ -1,0 +1,35 @@
+<%= render 'layouts/head' %>
+  <body class="home">
+    <div class="container-fluid home">
+      <div id="nav" class="row v-align">
+        <div class="col-6">
+          <%#= link_to "Vertical Tango", root_path, id: "logo" %>
+          <!-- &nbsp; <span id ="performer"> SANDRA FEUSI &amp; SAMUEL PYNE</span> -->
+        </div>
+        <div class="col">
+          <ul class="nav justify-content-end">
+            <li class="nav-item"><%= link_to "PERFORMANCES", performances_path, class: "nav-link" %></li>
+            <li class="nav-item"><%= link_to "BOOK A SHOW", bookings_path, class: "nav-link" %></li>
+            <li class="nav-item"><%= link_to "GALLERY", galleries_path, class: "nav-link" %></li>
+            <li class="nav-item"><%= link_to "ABOUT", abouts_path, class: "nav-link" %></li>
+            <li class="nav-item"><%= link_to "CONTACT US", contacts_path, class: "nav-link" %></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row middle-align">
+        <div class="col-4"></div>
+        <div class="col-4 home-text">
+          <p><span class="logo logo-home">Vertical<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tango</span></p>
+          <p class="performer performer-home">SANDRA FEUSI &amp; SAMUEL PYNE</p>
+        </div>
+        <div class="col-4"></div>
+      </div>
+    </div>
+
+    <div class="footer footer-home">
+      &copy; Sandra Feusi &amp; Samuel Pyne | Site Credit: Maya Kuriki
+    </div>
+
+  </body>
+</html>

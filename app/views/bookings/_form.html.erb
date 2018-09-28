@@ -1,0 +1,52 @@
+<% if !flash.empty? %>
+  <% flash.each do |key, value| %>
+    <strong><%= content_tag :div, value, class: "flash #{key}" %></strong>
+  <% end %>
+<% else %>
+  <%= form_for @booking do |f| %>
+    <% if @booking.errors.any? %>
+      <div class="error">
+        <strong><%= pluralize(@booking.errors.count, "error") %> prohibited this booking request submission:</strong>
+        <ul>
+          <% @booking.errors.full_messages.each do |m| %>
+            <li><%= m %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <h3>Client Information</h3>
+    <%= f.fields_for :client do |c| %>
+      <label>First Name *: <%= c.text_field :first_name %></label><br />
+      <label>Last Name *: <%= c.text_field :last_name %></label><br />
+      <label>Company: <%= c.text_field :company %></label><br />
+      <label>Address: <%= c.text_field :address %></label><br />
+      <label>City: <%= c.text_field :city %></label><br />
+      <label>State: <%= c.text_field :state %></label><br />
+      <label>Zip: <%= c.text_field :zip %></label><br />
+      <label>Country: <%= c.text_field :country %></label><br />
+      <label>Email *: <%= c.text_field :email %></label><br />
+      <label>Phone *: <%= c.text_field :phone %></label><br />
+      <br />
+    <% end %>
+
+    <h3>Venue</h3>
+    <%= f.fields_for :venue do |v| %>
+      <label>Name *:  <%= v.text_field :name %></label><br />
+      <label>Address:  <%= v.text_field :address %></label><br />
+      <label>City:  <%= v.text_field :city %></label><br />
+      <label>State:  <%= v.text_field :state %></label><br />
+      <label>Zip:  <%= v.text_field :zip %></label><br />
+      <label>Country:  <%= v.text_field :country %></label><br />
+    <% end %>
+
+    <h3>Date &amp; Time</h3>
+    <label>Date *: <%= f.date_field :date %></label><br />
+    <label>Time *: <%= f.time_field :time %></label></br />
+    <label>Duration (min): <%= f.text_field :duration %></label></br />
+    <label>Budget: <%= f.text_field :budget %></label></br />
+    <label>Type: <%= f.select(:booking_type_id, BookingType.order(:category).all.map { |c| [ c.category, c.id ] }) %></label></br /></br />
+
+    <%= f.submit %>
+  <% end %>
+<% end %>

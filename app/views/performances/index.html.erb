@@ -1,0 +1,16 @@
+<h1>Performance Schedule</h1>
+
+<% @performances.each do |p| %>
+  <div>
+    <div class="performance-cell-l">
+        <span class="bold"><%= p.date.strftime("%A, %B %e, %Y") %></span><br />
+        <%= p.time.strftime("%l:%M %p") %><br />
+    </div>
+    <div class="performance-cell-r">
+      <span class="bold"><%= p.venue.name %></span><br />
+      <%= p.venue.address %>, <%= p.venue.city %>, <%= p.venue.state %>, <%= p.venue.country %>
+    </div>
+    <hr class="performance" />
+  </div>
+  <br />
+<% end %>

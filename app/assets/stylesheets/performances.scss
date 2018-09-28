@@ -1,0 +1,18 @@
+// Place all the styles related to the performances controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.performance-cell-l {
+  width: 40%;
+  display: inline-block;
+}
+div.performance-cell-r {
+  display: inline-block;
+}
+
+hr.performance {
+  border: none;
+  height: 1px;
+  background-color: #DCDCDC;
+  margin: 20px 0px 0px 0px;
+}

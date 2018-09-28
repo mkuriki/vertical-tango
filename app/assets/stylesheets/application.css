@@ -1,0 +1,128 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets, or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS files in this directory.
+ *
+ * Styles in this file should be added after the last require_* statement.
+ *
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+html, body {
+ font-family: 'Droid Serif', Helvetica, sans-serif;
+ color: #505050;
+ height: 100%;
+}
+
+a.nav-link {
+  font-family: 'Oswald', Helvetica, sans-serif;
+  color: #fff;
+}
+
+a.nav-link:hover {
+ text-decoration: underline;
+}
+
+.logo {
+ font-family: 'Monsieur La Doulaise', Helvetica, sans-serif;
+ font-size: 50px;
+ text-decoration: none;
+ color: #fff;
+}
+
+.logo:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo-home {
+  font-size: 130px;
+  line-height: 0.9;
+}
+
+.performer {
+ font-family: 'Limelight', Helvetica, sans-serif;
+ font-size: 12px;
+ color: #fff;
+}
+
+.performer-home {
+  font-size: 14px;
+  padding-top: 10px;
+}
+
+.v-align {
+  align-items: baseline;
+}
+
+.middle-align {
+  min-height: 85%;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+}
+
+.home-text {
+  text-align: center;
+  opacity: 0.6;
+}
+
+div#nav {
+  background: rgba(0,0,0,0.3);
+  opacity: 0.75;
+  padding: 10px 0px 5px 0px;
+}
+
+div#main-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 450px;
+}
+
+.container-fluid {
+  /*min-height: 100%;*/
+}
+
+.main {
+  margin: 0px;
+  padding: 20px 80px 150px 80px;
+}
+
+.footer {
+  text-align: center;
+  font-size: 14px;
+  padding: 5px;
+  background-color: #000;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.footer-home {
+  opacity: 0.5;
+}
+
+h1 {
+  color: #b30000;
+  margin-bottom: 50px;
+}
+
+.bold {
+  font-size: 20px;
+  font-weight: bold;
+  color: #606060;
+}
+
+.flash.notice {
+  color: green;
+}
+
+.error {
+  color: red;
+}

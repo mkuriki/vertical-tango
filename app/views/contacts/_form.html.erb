@@ -1,0 +1,23 @@
+<% if !flash.empty? %>
+  <% flash.each do |key, value| %>
+    <strong><%= content_tag :div, value, class: "flash #{key}" %></strong>
+  <% end %>
+<% else %>
+  <%= form_for @contact do |f| %>
+    <% if @contact.errors.any? %>
+      <div class="error">
+        <strong><%= pluralize(@contact.errors.count, "error") %> prohibited this booking request submission:</strong>
+        <ul>
+          <% @contact.errors.full_messages.each do |m| %>
+            <li><%= m %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <label>Name *: <%= f.text_field :name %></label><br />
+    <label>Email *: <%= f.text_field :email %></label><br />
+    <label>Comment: <%= f.text_field :comment %></label><br />
+
+    <%= f.submit %>
+  <% end %>
+<% end %>
