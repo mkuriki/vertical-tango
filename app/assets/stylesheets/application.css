@@ -96,11 +96,12 @@ div#main-img {
 }
 
 .footer {
+  font-family: 'Oswald', Helvetica, sans-serif;
   text-align: center;
   font-size: 14px;
   padding: 5px;
   background-color: #000;
-  color: #fff;
+  color: #c8c8c8;
   opacity: 0.8;
 }
 
